@@ -25,15 +25,16 @@
 <p>To get early access to our planned projects, please fill in the following quick
   questionnaire.</p>
 
-<!--/*@thymesVar id="ratingForm" type="com.grenfox.exampractice.spring.feedbacksite.model.RatingForm"*/-->
-<form action="#" th:action="@{/form-recommendationRating}" th:object="${ratingForm}"
+<!--/*@thymesVar id="feedbackForm" type="com.grenfox.exampractice.spring.feedbacksite.model.FeedbackForm"*/-->
+<form action="#" th:action="@{/form-welcome-feedback}" th:object="${feedbackForm}"
       method="post">
   <table>
     <tr>
       <td>
-        <label for="recommendationRating-scale">Describe your experience with Green Fox Academy so
+        <label for="experience-feedback">Describe your experience with Green Fox Academy so
           far:</label>
-        <textarea rows="10" cols="50" th:field="*{feedbackText}"></textarea>
+        <textarea id="experience-feedback" rows="10" cols="50"
+                  th:field="*{feedbackText}"></textarea>
       </td>
     </tr>
     <tr>

@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RatingForm {
+public class FeedbackForm {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,10 +16,10 @@ public class RatingForm {
   private int recommendationRating;
   private String email;
 
-  public RatingForm() {
+  public FeedbackForm() {
   }
 
-  public RatingForm(String feedbackText, int recommendationRating, String email) {
+  public FeedbackForm(String feedbackText, int recommendationRating, String email) {
     this.feedbackText = feedbackText;
     this.recommendationRating = recommendationRating;
     this.email = email;
