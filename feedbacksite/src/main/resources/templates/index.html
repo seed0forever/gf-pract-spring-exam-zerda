@@ -47,7 +47,7 @@
           <label for="recommendationRating-scale">On a scale of 1 to 10, how likely are you to
             recommend Green Fox Academy to a friend?</label>
           <input id="recommendationRating-scale" type="number" class="form-control" min="1"
-                 th:field="*{recommendationRating}"/>
+                 value="1" th:field="*{recommendationRating}"/>
           <span class="help-block" th:if="${#fields.hasErrors('recommendationRating')}"
                 th:errors="*{recommendationRating}">Rating error</span>
         </div>
@@ -73,6 +73,6 @@
         th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
 <!--/* Include all compiled plugins (below), or include individual files as needed */-->
 <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"
-        th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+        th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 </body>
 </html>
