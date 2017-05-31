@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class FeedbackForm {
@@ -16,6 +17,7 @@ public class FeedbackForm {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
+  @NotBlank(message = "must not be blank")
   private String feedbackText;
 
   @Min(value = 10, message = "must be 10 or greater ;)")

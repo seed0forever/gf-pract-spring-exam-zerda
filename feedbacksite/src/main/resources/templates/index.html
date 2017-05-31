@@ -39,6 +39,8 @@
             far:</label>
           <textarea id="experience-feedback" class="form-control" rows="10" cols="50"
                     th:field="*{feedbackText}"></textarea>
+          <span class="help-block" th:if="${#fields.hasErrors('feedbackText')}"
+                th:errors="*{feedbackText}">Feedback text error</span>
         </div>
 
         <div class="form-group">
