@@ -20,7 +20,7 @@ public class FeedbackForm {
   @NotBlank(message = "must not be blank")
   private String feedbackText;
 
-  @Min(value = 10, message = "must be 10 or greater ;)")
+  @Min(value = 10, message = "must be 10 or greater")
   private int recommendationRating;
 
   @Pattern(regexp = REGEXP_CONTAINS_DOT_AND_AT_SIGN,
