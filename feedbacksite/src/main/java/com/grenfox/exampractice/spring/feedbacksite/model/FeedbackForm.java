@@ -4,16 +4,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class FeedbackForm {
+
+  private static final String REGEXP_CONTAINS_DOT_AND_AT_SIGN = "^(?=.*?\\.)(?=.*?@).*$";
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
   private String feedbackText;
+
+  @Min(value = 10, message = "must be 10 or greater ;)")
   private int recommendationRating;
+
+  @Pattern(regexp = REGEXP_CONTAINS_DOT_AND_AT_SIGN,
+          message = "must contain a @ and a dot (\".\")")
   private String email;
 
   public FeedbackForm() {
