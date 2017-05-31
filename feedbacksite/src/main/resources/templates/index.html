@@ -25,32 +25,39 @@
 <p>To get early access to our planned projects, please fill in the following quick
   questionnaire.</p>
 
-<!--/*@thymesVar id="feedbackForm" type="com.grenfox.exampractice.spring.feedbacksite.model.FeedbackForm"*/-->
-<form action="#" th:action="@{/form-welcome-feedback}" th:object="${feedbackForm}"
-      method="post">
-  <table>
-    <tr>
-      <td>
-        <label for="experience-feedback">Describe your experience with Green Fox Academy so
-          far:</label>
-        <textarea id="experience-feedback" rows="10" cols="50"
-                  th:field="*{feedbackText}"></textarea>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="recommendationRating-scale">On a scale of 1 to 10, how likely are you to
-          recommend Green Fox Academy to a friend?</label>
-        <input id="recommendationRating-scale" type="number" min="1"
-               th:field="*{recommendationRating}"/>
-      </td>
-    </tr>
-    <label for="email-address">Your email address:</label>
-    <input id="email-address" type="text" th:field="*{email}"/>
-    <input type="hidden" th:field="*{id}"/>
-    <input type="submit" value="Submit"/>
-  </table>
-</form>
+<div class="container-fluid">
+  <div class="col-md-5">
+    <div class="form-area">
+      <!--/*@thymesVar id="feedbackForm" type="com.grenfox.exampractice.spring.feedbacksite.model.FeedbackForm"*/-->
+      <form action="#" th:action="@{/form-welcome-feedback}" th:object="${feedbackForm}"
+            method="post" role="form">
+
+        <div class="form-group">
+          <label for="experience-feedback">Describe your experience with Green Fox Academy so
+            far:</label>
+          <textarea id="experience-feedback" class="form-control" rows="10" cols="50"
+                    th:field="*{feedbackText}"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="recommendationRating-scale">On a scale of 1 to 10, how likely are you to
+            recommend Green Fox Academy to a friend?</label>
+          <input id="recommendationRating-scale" type="number" class="form-control" min="1"
+                 th:field="*{recommendationRating}"/></div>
+
+        <div class="form-group">
+          <label for="email-address">Your email address:</label>
+          <input id="email-address" type="text" class="form-control" th:field="*{email}"/>
+        </div>
+
+        <input type="hidden" th:field="*{id}"/>
+        <button type="submit" id="submit-feedback" class="btn btn-primary pull-right">Submit
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/webjars/jquery/1.11.1/jquery.min.js"
