@@ -47,14 +47,14 @@
           <label for="recommendationRating-scale">On a scale of 1 to 10, how likely are you to
             recommend Green Fox Academy to a friend?</label>
           <input id="recommendationRating-scale" type="number" class="form-control" min="1"
-                 value="1" th:field="*{recommendationRating}"/>
+                 value="1" placeholder="Between 1 and 10" th:field="*{recommendationRating}"/>
           <span class="help-block" th:if="${#fields.hasErrors('recommendationRating')}"
                 th:errors="*{recommendationRating}">Rating error</span>
         </div>
 
         <div class="form-group">
           <label for="email-address">Your email address:</label>
-          <input id="email-address" type="text" class="form-control" th:field="*{email}"/>
+          <input id="email-address" type="text" class="form-control" placeholder="mail@example.com" th:field="*{email}"/>
           <span class="help-block" th:if="${#fields.hasErrors('email')}"
                 th:errors="*{email}">Email error</span>
         </div>
