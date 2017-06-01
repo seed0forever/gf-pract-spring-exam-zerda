@@ -21,7 +21,7 @@ public class FeedbackForm {
   private String feedbackText;
 
   @Min(value = 10, message = "must be 10 or greater")
-  private int recommendationRating;
+  private Integer recommendationRating;
 
   @Pattern(regexp = REGEXP_CONTAINS_DOT_AND_AT_SIGN,
           message = "must contain a @ and a dot (\".\")")
@@ -52,11 +52,11 @@ public class FeedbackForm {
     this.feedbackText = feedbackText;
   }
 
-  public int getRecommendationRating() {
+  public Integer getRecommendationRating() {
     return recommendationRating;
   }
 
-  public void setRecommendationRating(int recommendationRating) {
+  public void setRecommendationRating(Integer recommendationRating) {
     this.recommendationRating = recommendationRating;
   }
 
