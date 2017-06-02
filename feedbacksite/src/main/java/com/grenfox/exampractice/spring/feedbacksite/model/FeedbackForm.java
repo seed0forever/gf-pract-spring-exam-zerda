@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -20,6 +21,7 @@ public class FeedbackForm {
   @NotBlank(message = "must not be blank")
   private String feedbackText;
 
+  @NotNull(message = "must be 10 or greater")
   @Min(value = 10, message = "must be 10 or greater")
   private Integer recommendationRating;
 
